@@ -7,7 +7,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin:"  https://todofrontend-aj16.vercel.app/",
+credentials:true;
+}));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://rathorpawan128:9ThdeeAZIVC2xRXt@clusterone.vhjas.mongodb.net/todo', {
